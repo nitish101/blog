@@ -1,0 +1,9 @@
+{% if books %}
+{% for each_book in books %} // books is list here so pick each element using for loop 
+{#    <a href="{% url 'buy_book' pk=each_book.pk %}">#}
+{#    <!--Upon successful search book image with hyperlink appears -->#}
+{#    <img src="{{each_book.image.url}}" alt="No Image"></a>#}
+    <p>{{each_book.title}}</p>
+    <p>Rs.{{each_book.content}}</p>
+{% endfor %}
+{% endif %}
