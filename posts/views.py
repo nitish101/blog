@@ -33,12 +33,12 @@ def post_list(request):
     all_posts = paginator.get_page(page)
 
 
-    return render(request, 'blog/index.html', {'all_posts': all_posts})
+    return render(request, 'posts/index.html', {'all_posts': all_posts})
 
 
 class Detailview(generic.DetailView):
     model = Post
-    template_name = 'blog/detail.html'
+    template_name = 'posts/detail.html'
 
 
 
